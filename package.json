@@ -1,0 +1,21 @@
+{
+  "name": "EmailSummary",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "nylas": ">=0.4.402"
+  },
+  "windowTypes": {
+    "default": true,
+    "composer": true
+  },
+  "description": "Enter a description of your package!",
+  "dependencies": {
+    "lexrank": "^1.0.4"
+  },
+  "license": "MIT"
+}
