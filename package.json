@@ -1,7 +1,7 @@
 {
-  "name": "EmailSummary",
+  "name": "N1 Email Summary Plugin",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": ""
@@ -13,7 +13,7 @@
     "default": true,
     "composer": true
   },
-  "description": "Enter a description of your package!",
+  "description": "A plugin that uses the Lexrank algorithm to find the most important sentences in your email.",
   "dependencies": {
     "lexrank": "^1.0.4"
   },
