@@ -12,8 +12,8 @@ export default class EmailSummary extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: '',
-      summaryLines: 1
+      summaryLines: 2,
+      toplines: []
     }
   }
 
@@ -24,25 +24,30 @@ export default class EmailSummary extends React.Component {
   createSummary() {
     lexrank.summarize(this.props.message.computePlainText(), this.state.summaryLines, (err, toplines, summary) => {
       if (err) return;
-      this.setState({content: summary});
+      this.setState({
+        toplines: toplines
+      });
     });
-  }
-
-  increaseSummary() {
-    this.setState({
-      summaryLines: this.state.summaryLines++
-    })
-    this.createSummary();
-
   }
 
   render() {
     return (
-      <div className="email-summary">
-        {this.state.content}
-
-        <a onClick={this.increaseSummary}>more...</a>
-      </div>
+    <div>
+      {
+        this.state.toplines.length > 0 
+        ? <div className="email-summary">
+            <p>The top sentences of this email are:</p>
+            <ul>
+              {
+                this.state.toplines.map((line) => {
+                  return (<li>{line.text}</li>);
+                })
+              }
+            </ul>
+          </div>
+        : null
+      }
+    </div>
     );
   }
 }
