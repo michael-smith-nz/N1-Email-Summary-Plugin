@@ -1,7 +1,7 @@
 
 ## N1 Email Summary Plugin
 
-An [N1](https://github.com/nylas/N1) that uses the [Lexrank algorithm](https://github.com/linanqiu/lexrank) to find the most important sentences in your email.
+An [N1](https://github.com/nylas/N1) plugin that uses the [Lexrank algorithm](https://github.com/linanqiu/lexrank) to find the most important sentences in your email.
 
 ![Demo](./demo.png)
 
